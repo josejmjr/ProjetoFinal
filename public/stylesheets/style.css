@@ -1,0 +1,74 @@
+body {
+  padding: 50px;
+}
+
+img{
+  width: 30px;
+  height: 30px;
+}
+
+label{
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.cabeçalho{
+  background-color: #82bafa;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.table thead tr td{
+  font-weight: bold;
+  text-align: center;
+}
+
+.table thead tr {
+  background-color: #c4c0c0;
+}
+
+.tabela-responsiva{
+  width: 100%;
+  overflow: scroll;
+}
+
+.botao-home{
+  margin-bottom: 50px;
+}
+
+#formCadastro{
+  margin-bottom: 50px;
+  border-bottom: 2px solid #8c8b8b;
+  padding-bottom: 20px;
+}
+
+.botoes-pesquisa{
+  clear: both;
+}
+
+.botoes-pesquisa .form-control{
+  width: 80%;
+}
+
+.botoes-pesquisa input[name=nome]{
+  float: left;
+}
+
+.botoes-pesquisa .btn{
+  float: right;
+}
+
+.btn{
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn:hover{
+  color: #000000;
+}
+
+.btn-warning{
+  margin-right: 10%;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alterando Dados do Cliente</title>
+  <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <script type="text/javascript" src="/javascripts/jquery-1.12.0.js"></script>
+  <script type="text/javascript" src="/javascripts/validacao.js"></script>
+</head>
+
+<body>
+  <div>
+      <h1 class="cabeçalho">Alterando Dados do Cliente</h1>
+  </div>
+  
+  <a href="/"  class="btn btn-primary botao-home">HOME PAGE</a>
+
+  <fieldset id="formCadastro">
+    <legend class="cabeçalho"> Alterando Cliente </legend>
+    <form action="/alterar-pessoa?cpfAlterar=<%= pessoa.cpf %>" method="POST" onsubmit="return validacao()">
+      <div>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" class="form-control" value="<%= pessoa.nome %>" id="nome" />
+      </div>
+      <div>
+        <label for="sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" class="form-control" value="<%= pessoa.sobrenome %>" id="sobrenome" />
+      </div>
+      <div>
+        <label for="cpf">CPF: </label>
+        <input type="text"  readonly="true" name="cpf" class="form-control" value="<%= pessoa.cpf %>" id="cpf" />
+      </div>
+      <div>
+        <label for="telefone">Telefone: </label>
+        <input type="text" name="telefone" class="form-control" value="<%= pessoa.telefone %>" id="telefone"  />
+      </div>
+      <div>
+        <label for="email">Email: </label>
+        <input type="text" name="email" class="form-control" value="<%= pessoa.email %>" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <small  class="form-text text-muted">
+          Formato: usuario@exemplo.com
+        </small>
+      </div>
+      <div>
+        <label for="endereco">Endereço: </label>
+        <input type="text" name="endereco" class="form-control" value="<%= pessoa.endereco %>" id="endereco" />
+      </div>
+      <hr>
+      <div id="btn_cadastrar">
+        <input type="submit" class="btn btn-success" value="Alterar" />
+      </div>
+    </form>
+  </fieldset>
+
+ 
+</body>
+
+</html>
